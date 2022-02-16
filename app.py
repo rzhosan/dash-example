@@ -17,6 +17,7 @@ from executive_summary import ExecutiveSumary
 from shap_explorer import ShapExplorer
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
 SIDEBAR_STYLE = {
@@ -83,4 +84,4 @@ def render_page_content(pathname):
 
 
 if __name__ == "__main__":
-    app.run_server(port=8888, debug=True)
+    app.run_server(port=8888, debug=True, host='0.0.0.0')
