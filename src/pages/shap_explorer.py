@@ -1,12 +1,9 @@
 
-from traceback import print_tb
-import pandas as pd
-from dash import Dash, html, dcc, Input, Output
+from dash import html, dcc, Input, Output
 import plotly.express as px
 import dash_bootstrap_components as dbc
 
 class ShapExplorer:
-
     def __init__(self, app):
         self.df = px.data.iris()
 
@@ -110,9 +107,7 @@ class ShapExplorer:
         Output('graph-with-slider', 'figure'),
         Input('species_search', 'value'))
         def update_figure(selected_species):
-            
             filtered_df = self.df[self.df['species'].isin(selected_species)] if selected_species is not None and len(selected_species) > 0 else self.df
-
             fig = px.scatter(filtered_df, x="sepal_width", y="sepal_length", color='petal_length')
             fig.update_layout(transition_duration=500)
 
