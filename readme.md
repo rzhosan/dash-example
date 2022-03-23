@@ -6,4 +6,4 @@
 1. Run Powershell core (it's better to make it the default terminal in VSCode)
 1. Create virtual environments by running `python -m venv .venv`
 1. Activate virtual environment `.venv/Scripts/Activate.ps1`
-1. Run the application `python3 src/app.py`
+1. Run the application `python src/app.py`
