@@ -1,7 +1,0 @@
-runtime: python39
-
-service: dash-example
-
-instance_class: F2
-
-entrypoint: gunicorn -b :8080 -w 2 --chdir src app:server
