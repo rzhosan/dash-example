@@ -73,7 +73,7 @@ class ShapExplorer:
                 dbc.CardHeader("Summary"),
                 dbc.CardBody(
                     [
-                        html.P("Some info about the model", className="card-text"),
+                        html.P("Some info about the model v2", className="card-text"),
                     ]
                 )               
             ]
