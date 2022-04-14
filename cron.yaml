@@ -1,0 +1,9 @@
+cron:
+- description: "A cron to test"
+  url: /
+  target: dash-example
+  schedule: every monday 06:00
+  retry_parameters:
+    job_retry_limit: 3
+    min_backoff_seconds: 30
+    max_backoff_seconds: 90
